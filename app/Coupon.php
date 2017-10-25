@@ -37,6 +37,7 @@ class Coupon {
     return in_array($elem, $this->list);
   }
 
+  // Function needed to return a JSON
   public function toArray(){
     return array( "cupons" =>
       array(
