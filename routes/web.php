@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'Coupons@generateDefault');
+Route::get('/prefix/{prefix}', 'Coupons@generateWithPrefix');
+Route::get('/quantity/{quantity}', 'Coupons@generateWithQuantity');
+Route::get('/prefix/{prefix}/quantity/{quantity}', 'Coupons@generateWithBoth');
