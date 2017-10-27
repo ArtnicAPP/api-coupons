@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 
-Route::get('/', 'Coupons@generateDefault');
-Route::get('/prefix/{prefix}', 'Coupons@generateWithPrefix');
-Route::get('/quantity/{quantity}', 'Coupons@generateWithQuantity');
-Route::get('/prefix/{prefix}/quantity/{quantity}', 'Coupons@generateWithBoth');
+Route::get('/size/{size}', 'Coupons@generateDefault');
+Route::get('/prefix/{prefix}/size/{size}', 'Coupons@generateWithPrefix');
+Route::get('/quantity/{quantity}/size/{size}', 'Coupons@generateWithQuantity');
+Route::get('/prefix/{prefix}/quantity/{quantity}/size/{size}', 'Coupons@generateWithBoth');
